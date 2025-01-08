@@ -59,7 +59,7 @@ function estimateDeliveryTime(shippingMethod, distance) {
   }
   return days.toString();
 }
-app.get('/estimated-delivery', (req, res) => {
+app.get('/estimate-delivery', (req, res) => {
   let shippingMethod = req.query.shippingMethod;
   let distance = parseFloat(req.query.distance);
   res.send(estimateDeliveryTime(shippingMethod, distance));
